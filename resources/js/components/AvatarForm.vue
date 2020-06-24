@@ -47,7 +47,7 @@ export default {
       let data = new FormData(); //this is a key/values object that simulate a DOM form
       data.append("avatar", avatar);
       axios
-        .post("/api/users/" + this.userProfile.name + "/avatar", data)
+        .post("/forum/api/users/" + this.userProfile.name + "/avatar", data)
         .then(() => flash("Avatar uploaded!", "success"));
     }
   }

@@ -33,13 +33,13 @@ export default {
     },
 
     favorite(){
-      axios.post("/replies/" + this.reply.id + "/favorites");
+      axios.post("/forum/replies/" + this.reply.id + "/favorites");
       this.favoritesCount++;
       this.isFavorited = true;
     },
 
     unfavorite() {
-      axios.delete("/replies/" + this.reply.id + "/favorites");
+      axios.delete("/forum/replies/" + this.reply.id + "/favorites");
       this.favoritesCount--;
       this.isFavorited = false;
     }

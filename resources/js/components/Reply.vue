@@ -3,25 +3,20 @@
     <div :id="'reply-'+ id" class="card-header reply-header" :class="isBest ? 'bg-success' : ''">
       <div class="row">
         <div class="col-9">
-          <img :src="'/'+avatar" :alt="name" width="25" height="auto" class="mr-1" />
-          <a :href="'/profiles/'+ name" v-text="name"></a>
+          <img :src="'/forum/'+avatar" :alt="name" width="25" height="auto" class="mr-1" />
+          <a :href="'/forum/profiles/'+ name" v-text="name"></a>
           said
           <span v-text="ago"></span> ...
         </div>
 
-        <!-- @if (Auth::check()) -->
+       
 
         <div class="offset-1 col-2" v-if="signedIn">
           <favorite :reply="data"></favorite>
 
-          <!-- {{-- <form method="POST" action="/replies/{{$reply->id}}/favorites">
-                    @csrf
-                    <button class="btn btn-dark btn-sm"
-                        {{$reply->isFavorited() ? 'disabled' :''}}>{{$reply->getFavoritesCountAttribute()}}
-                        Favorites</button>
-          </form> --}}-->
+         
         </div>
-        <!-- @endif -->
+    
       </div>
     </div>
 
@@ -120,7 +115,7 @@ export default {
     update() {
       //use the defined edit routing patch link and send it the updated
       axios
-        .patch("/replies/" + this.data.id, {
+        .patch("/forum/replies/" + this.data.id, {
           body: this.body
         })
         .catch(error => {
@@ -138,7 +133,7 @@ export default {
     },
 
     changeBestReply() {
-      axios.post("/replies/" + this.data.id + "/best");
+      axios.post("/forum/replies/" + this.data.id + "/best");
 
       // this.isBest = true;
       //when a reply component gets set as best reply, it emits an event that tells the all reply components about it

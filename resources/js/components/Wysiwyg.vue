@@ -75,7 +75,7 @@ export default {
       let formData = new FormData();
       formData.append("attached", file);
       axios
-        .post("/api/users/" + this.userId + "/attachments", formData, {
+        .post("/forum/api/users/" + this.userId + "/attachments", formData, {
           headers: {
             "Content-Type": "multipart/form-data"
           },
@@ -100,8 +100,8 @@ export default {
 
           let url = response.data.url;
           var attributes = {
-            url: "http://forum/" + url,
-            href: "http://forum/" + url + "?content-disposition=attachment"
+            url: "http://ist-industries.com/forum/" + url,
+            href: "http://ist-industries.com/forum/" + url + "?content-disposition=attachment"
           };
           console.log(attributes.href);
           successCallback(attributes);
@@ -122,7 +122,7 @@ export default {
 
       if (!this.bodyGotCleared) {
         console.log("dum trix");
-        axios.delete("/api/attachments/" + this.attachmentAttributes.id);
+        axios.delete("/forum/api/attachments/" + this.attachmentAttributes.id);
       }
       // else {
       //   console.log("body got cleared true: " + this.bodyGotCleared);
@@ -138,7 +138,7 @@ export default {
       }
     },
     loadMentionsList() {
-      axios.get("/api/users").then(this.tributeAutoComplete); // getting all the user names for now.
+      axios.get("/forum/api/users").then(this.tributeAutoComplete); // getting all the user names for now.
     },
 
     tributeAutoComplete(response) {
