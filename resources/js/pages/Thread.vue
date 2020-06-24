@@ -27,7 +27,7 @@ export default {
     toggleLock() {
       //confusing but professional conditional syntax xD
       axios[this.locked ? "delete" : "post"](
-        "/locked-threads/" + this.thread.slug
+        "/forum/locked-threads/" + this.thread.slug
       );
       this.locked = !this.locked;
     },

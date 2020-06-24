@@ -262,13 +262,13 @@ class Thread extends Model
     public function path()
     {
         // return '/threads/' . $this->channel->slug . '/' . $this->id;
-        return '/threads/' . $this->channel->slug . '/' . $this->slug;
+        return '/forum/threads/' . $this->channel->slug . '/' . $this->slug;
     }
 
     public function getPathAttribute()
     {
         if ($this->channel) {
-            return '/threads/' . $this->channel->slug . '/' . $this->slug;
+            return '/forum/threads/' . $this->channel->slug . '/' . $this->slug;
         }
 
         return '';

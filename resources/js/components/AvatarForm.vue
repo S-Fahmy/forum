@@ -26,7 +26,7 @@ export default {
   data() {
     return {
       name: this.userProfile.name,
-      avatar: "/" + this.userProfile.avatar_path
+      avatar: "/forum/" + this.userProfile.avatar_path
     };
   },
 

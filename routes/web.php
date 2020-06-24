@@ -66,9 +66,9 @@ Route::get('/profiles/{user}/notifications', 'UserNotificationsController@index'
 Route::delete('/profiles/{user}/notifications/{notification}', 'UserNotificationsController@destroy');
 
 
-Route::post('/api/users/{user}/avatar', 'Api\UserAvatarController@store')->middleware('auth')->name('avatar');
-Route::post('/api/users/{user}/attachments', 'Api\AttachmentsController@store')->middleware('auth');
-Route::delete('/api/attachments/{attachments}', 'Api\AttachmentsController@destroy')->middleware('auth');
+Route::post('/api/users/{user}/avatar', 'api\UserAvatarController@store')->middleware('auth')->name('avatar');
+Route::post('/api/users/{user}/attachments', 'api\AttachmentsController@store')->middleware('auth');
+Route::delete('/api/attachments/{attachments}', 'api\AttachmentsController@destroy')->middleware('auth');
 
                
 

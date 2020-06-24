@@ -7,22 +7,6 @@
        
         <div class="col-md-8 ml-auto mr-auto">
           
-                {{-- <h1>
-                    {{ $profileUser->name }}
-                </h1>
-                <hr />
-                @can('update', $profileUser)
-                <form method="POST" action="{{ route('avatar', $profileUser) }}" enctype="multipart/form-data">
-                    {{ csrf_field() }}
-
-                    <input type="file" name="avatar">
-                    <button type="submit">add</button>
-
-                </form>
-                @endcan
-                <img src='/storage/{{$profileUser->avatar_path}}' width="200px" height="auto"> --}}
-
-
            
 
             @forelse ($activities as $date => $activity)
