@@ -100,8 +100,8 @@ export default {
 
           let url = response.data.url;
           var attributes = {
-            url: "http://ist-industries.com/forum/" + url,
-            href: "http://ist-industries.com/forum/" + url + "?content-disposition=attachment"
+            url: url,
+            href:url + "?content-disposition=attachment"
           };
           console.log(attributes.href);
           successCallback(attributes);
