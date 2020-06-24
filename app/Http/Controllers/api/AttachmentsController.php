@@ -6,6 +6,7 @@ use App\Attachments;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class AttachmentsController extends Controller
 {
@@ -21,7 +22,7 @@ class AttachmentsController extends Controller
 
         return  Attachments::create([
 
-            'url' => $path,
+            'url' =>  Storage::url($path),
             'user_id' => auth()->id(),
         ]);
     }
