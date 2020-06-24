@@ -100,8 +100,8 @@ export default {
 
           let url = response.data.url;
           var attributes = {
-            url: url,
-            href:url + "?content-disposition=attachment"
+            url: 'forum/' + url,
+            href:'forum/' + url + "?content-disposition=attachment"
           };
           console.log(attributes.href);
           successCallback(attributes);
