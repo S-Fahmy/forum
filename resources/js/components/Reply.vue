@@ -47,7 +47,7 @@
       >
         <div class="row">
           <div class="col-10">
-            <!-- v-if="authorize('owns', reply)" -->
+           
             <div v-if="authorize('owns', reply)">
               <button class="btn-sm btn btn-light" @click="editing = true">
                 <font-awesome-icon :icon="['fas', 'edit']" />
