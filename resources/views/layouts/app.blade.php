@@ -85,16 +85,16 @@
                                 Filter posts
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="/threads/">All posts</a></li>
+                                <li><a class="dropdown-item" href="{{ url('/threads/')}}">All posts</a></li>
 
                                 @if (auth()->check())
-                                <li> <a class="dropdown-item" href="/threads?by={{auth()->user()->name}}">My posts</a>
+                                <li> <a class="dropdown-item" href="threads?by={{auth()->user()->name}}">My posts</a>
                                 </li>
 
                                 @endif
 
-                                <li> <a class="dropdown-item" href="/threads?popular=1">Popular posts</a></li>
-                                <li> <a class="dropdown-item" href="/threads?unanswered=1">Unanswered posts</a></li>
+                                <li> <a class="dropdown-item" href="threads?popular=1">Popular posts</a></li>
+                                <li> <a class="dropdown-item" href="threads?unanswered=1">Unanswered posts</a></li>
 
 
                             </ul>
@@ -110,7 +110,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 @foreach ($channels as $channel)
-                                <a class="dropdown-item" href="{{'/threads/'.$channel->slug}}">{{$channel->name}}</a>
+                                <a class="dropdown-item" href="{{'threads/'.$channel->slug}}">{{$channel->name}}</a>
 
                                 @endforeach
                             </div>
@@ -143,7 +143,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('profile', auth()->user()) }}">My Profile</a>
 
-                                <a class="dropdown-item" href="/threads?by={{auth()->user()->name}}">My posts</a>
+                                <a class="dropdown-item" href="threads?by={{auth()->user()->name}}">My posts</a>
 
 
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
