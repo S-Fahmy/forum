@@ -1,0 +1,103 @@
+.forumnavbar{
+
+    font-size: .9em;
+}
+
+.forumnavbar h4{
+    font-size: 1.1em;
+    padding-top: 9px;
+    margin-right: 15px;
+}
+/* trix-editor .trix-button--remove{
+    display: none !important;
+    color: yellow !important;
+
+} */
+
+.thread-card {
+    margin-bottom: 15px;
+}
+
+.thread-card:hover {
+    background-color: #f7f7f7;
+}
+
+.thread-card .thread-header a {
+    font-size: 1.4em;
+    color: black !important;
+}
+
+.thread-card i {
+    color: rgb(107, 107, 107);
+    font-size: .8em;
+}
+
+.thread-card .comments {
+    padding-left: 8%;
+}
+
+.thread-card .postedBy {
+    font-size: .8em;
+    margin-top: -6px;
+    margin-bottom: 7px;
+}
+
+.thread-card .card-body {
+    color: rgb(102, 102, 102);
+    max-height: 150px;
+    overflow: hidden;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.thread-card .card-body h1, .thread-card .card-body h2, .thread-card .card-body h3, .thread-card .card-body h4, .thread-card .card-body h5, .thread-card .card-body h6 {
+    font-size: 1em;
+}
+
+.thread-card .card-footer {
+    font-size: .8em;
+    text-align: right;
+    padding: 5px;
+    padding-right: 36px;
+}
+
+.thread-card .card-footer i {
+    margin-right: 3px;
+}
+
+.trending-card {
+    margin-top: 15px;
+}
+
+.trending-header {
+    color: #6a737c;
+    background-color: #fbf2d4;
+    font-size: 1em;
+}
+
+.trending-body {
+    background-color: #fdf7e3;
+}
+
+.trending-list a {
+    color: black;
+}
+
+.trending-list {
+    margin-bottom: 10px;
+}
+
+.lockBtn {
+    font-size: .8em;
+    margin-right: 10px;
+}
+
+
+
+.activity-header{
+    background: white;
+    color: gray;
+}
+.activity-header a{
+    color: #336677;
+}
