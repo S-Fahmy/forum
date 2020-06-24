@@ -18,7 +18,7 @@
 export default {
   created() {
     axios
-      .get("/profiles/" + window.App.user.name + "/notifications")
+      .get("/forum/profiles/" + window.App.user.name + "/notifications")
       .then((response => this.notifications = response.data));
   },
 
@@ -31,7 +31,7 @@ export default {
   methods: {
       markAsRead(notification){
 
-          axios.delete("/profiles/" + window.App.user.name + "/notifications/"+ notification.id);
+          axios.delete("/forum/profiles/" + window.App.user.name + "/notifications/"+ notification.id);
       }
   }
 };
