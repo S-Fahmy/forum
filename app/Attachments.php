@@ -16,7 +16,7 @@ class Attachments extends Model
         //when we delete a attachment from the dB we delete the file
         static::deleting(function ($attachmentFile) {
         
-            Storage::disk('users_uploads')->delete($attachmentFile->url);
+            Storage::disk('public')->delete($attachmentFile->url);
 
         });
     }

@@ -16,7 +16,7 @@ class AttachmentsController extends Controller
             'attached' => ['required']
         ]);
 
-        $path = request()->file('attached')->store(auth()->id() . '/attachments/', 'users_uploads'); //user_uploads root is defined in filesystem.php
+        $path = request()->file('attached')->store(auth()->id() . '/attachments/', 'public'); //user_uploads root is defined in filesystem.php
 
 
         return  Attachments::create([
