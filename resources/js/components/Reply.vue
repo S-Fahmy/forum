@@ -146,7 +146,7 @@ export default {
     },
 
     destroy() {
-      axios.delete("/replies/" + this.data.id);
+      axios.delete("replieskosomak/" + this.data.id);
 
       //we delete the reply we get the response from the server then we apply a
       //fade out effect to the deleted element using jquery then we emit to parent reply
