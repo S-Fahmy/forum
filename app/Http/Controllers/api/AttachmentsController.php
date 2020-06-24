@@ -22,7 +22,7 @@ class AttachmentsController extends Controller
 
         return  Attachments::create([
 
-            'url' =>  Storage::url($path),
+            'url' => asset(Storage::url($path)),
             'user_id' => auth()->id(),
         ]);
     }
