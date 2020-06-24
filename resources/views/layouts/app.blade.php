@@ -77,7 +77,7 @@
                 <div class="collapse navbar-collapse" style="font-size: 1.2em" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"> <a class="nav-link" href="/threads/new">New post</a>
+                        <li class="nav-item"> <a class="nav-link" href="{{ url('/threads/new')}}">New post</a>
 
                         <li style="margin-left:10px" class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
