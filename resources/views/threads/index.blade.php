@@ -18,7 +18,7 @@
                         <div class="row">
                             <div class="col-10">
                                 <h5 class="thread-header">
-                                    @if (auth()->check() && $thread->hasUpdatesFor)
+                                    @if ($thread->hasUpdatesFor)
                                     <a style="color:cyan;" href={{$thread->path()}}>{{$thread->title}}</a>
 
 
