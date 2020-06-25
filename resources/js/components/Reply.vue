@@ -43,7 +43,7 @@
 <!-- v-if="authorize('owns', reply) || authorize('owns', reply.thread)" -->
       <div
         class="card-footer reply-footer"
-        v-if="authorize('owns', reply)"
+        v-if="true"
       >
         <div class="row">
           <div class="col-10">
