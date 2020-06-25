@@ -39,7 +39,7 @@
       <div class="card-footer reply-footer" v-if="true">
         <div class="row">
           <div class="col-10">
-            <div v-if="true">
+            <div v-if="authorize('owns' , reply) == true">
               <button class="btn-sm btn btn-light" @click="editing = true">
                 <font-awesome-icon :icon="['fas', 'edit']" />
               </button>
