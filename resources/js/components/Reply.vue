@@ -35,11 +35,11 @@
           <p v-html="body"></p>
         </div>
       </div>
-      <!-- v-if="authorize('owns', reply) || authorize('owns', reply.thread)" -->
-      <div class="card-footer reply-footer" v-if="true">
+      
+      <div class="card-footer reply-footer" v-if="authorize('owns', reply) || authorize('owns', reply.thread)">
         <div class="row">
           <div class="col-10">
-            <div v-if="authorize('owns' , reply) == true">
+            <div v-if="authorize('owns' , reply)">
               <button class="btn-sm btn btn-light" @click="editing = true">
                 <font-awesome-icon :icon="['fas', 'edit']" />
               </button>
