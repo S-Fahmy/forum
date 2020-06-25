@@ -36,10 +36,10 @@
         </div>
       </div>
       <!-- v-if="authorize('owns', reply) || authorize('owns', reply.thread)" -->
-      <div class="card-footer reply-footer" v-if="1 == 1">
+      <div class="card-footer reply-footer" v-if="true">
         <div class="row">
           <div class="col-10">
-            <div v-if="1 ==1">
+            <div v-if="true">
               <button class="btn-sm btn btn-light" @click="editing = true">
                 <font-awesome-icon :icon="['fas', 'edit']" />
               </button>
