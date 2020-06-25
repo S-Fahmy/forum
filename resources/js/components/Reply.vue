@@ -9,14 +9,9 @@
           <span v-text="ago"></span> ...
         </div>
 
-       
-
         <div class="offset-1 col-2" v-if="signedIn">
           <favorite :reply="data"></favorite>
-
-         
         </div>
-    
       </div>
     </div>
 
@@ -40,15 +35,11 @@
           <p v-html="body"></p>
         </div>
       </div>
-<!-- v-if="authorize('owns', reply) || authorize('owns', reply.thread)" -->
-      <div
-        class="card-footer reply-footer"
-        v-if="true"
-      >
+      <!-- v-if="authorize('owns', reply) || authorize('owns', reply.thread)" -->
+      <div class="card-footer reply-footer" v-if="1 == 1">
         <div class="row">
           <div class="col-10">
-           
-            <div v-if="authorize('owns', reply)">
+            <div v-if="1 ==1">
               <button class="btn-sm btn btn-light" @click="editing = true">
                 <font-awesome-icon :icon="['fas', 'edit']" />
               </button>
@@ -147,7 +138,6 @@ export default {
       //we delete the reply we get the response from the server then we apply a
       //fade out effect to the deleted element using jquery then we emit to parent reply
       $(this.$el).fadeOut(300, () => {
-        
         this.$emit("deleted", this.data.id);
       });
     }
