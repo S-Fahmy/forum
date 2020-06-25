@@ -28,7 +28,7 @@ class ThreadController extends Controller
     public function index(Channel $channel, ThreadFilters $filters/*, Trending $trending*/)
     {
         $threads = $this->getThreads($channel, $filters);
-        dd($threads);
+        dd(json_encode($threads));
         if (request()->wantsJson()) {
             return $threads;
         }
