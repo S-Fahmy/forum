@@ -26,7 +26,7 @@
     <div v-else>
       <p class="text-center">
         Please
-        <a href="/login">sign in</a> to participate in this
+        <a href="/forum/login">sign in</a> to participate in this
         discussion.
       </p>
     </div>
