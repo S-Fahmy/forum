@@ -40,13 +40,13 @@
           <div class="card">
             <div class="card-header">Trending threads</div>
 
-            <div class="card-body">
+            <!-- <div class="card-body">
               <ul id="example-1" class="list-group">
                 <li v-for="item in trendingThreads" :key="item.path" class="list-group-item">
                   <a href="item.path">{{item.title}}</a>
                 </li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>

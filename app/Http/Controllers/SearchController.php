@@ -14,7 +14,7 @@ class SearchController extends Controller
      * @param  \App\Trending $trending
      * @return mixed
      */
-    public function show(Trending $trending)
+    public function show(/*Trending $trending*/)
     {
         //thread already is using the searchable trait, and we are connected to algolia services in the scout and .env files
         // $threads = Thread::search(request('q'))->paginate(25); 
@@ -34,7 +34,7 @@ class SearchController extends Controller
         }
         return view('search', [
             
-            'trendingThreads' => json_encode($trending->get())
+            'trendingThreads' => [] //json_encode($trending->get())
         ]);
     }
 }
