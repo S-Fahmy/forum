@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-
-<search :trending = "{{$trendingThreads}}"></search>
+{{-- :trending = "{{$trendingThreads}}" --}}
+<search ></search> 
 
  @endsection
