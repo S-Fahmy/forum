@@ -28,12 +28,12 @@ class ThreadController extends Controller
     public function index(Channel $channel, ThreadFilters $filters/*, Trending $trending*/)
     {
         $threads = $this->getThreads($channel, $filters);
-        return $threads;
+
         if (request()->wantsJson()) {
             return $threads;
         }
 
-    return view('threads.index', ['threads' => $threads/*, 'trending' => $trending->get()*/]);
+        return view('threads.index', ['threads' => $threads/*, 'trending' => $trending->get()*/]);
     }
 
     /**
@@ -152,7 +152,7 @@ class ThreadController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update($channel, Thread $thread)
-    {   
+    {
         $this->authorize('update', $thread); // policy
 
         $thread->update(request()->validate([
