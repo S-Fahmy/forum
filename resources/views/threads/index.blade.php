@@ -86,7 +86,7 @@
                 </div>
 
                 <div class="card-body">
-                    <form method="GET" action="/threads/search">
+                    <form method="GET" action="/forum/threads/search">
                         <div class="form-group">
                             <input type="text" placeholder="Search threads..." name="query" class="form-control">
                         </div>
