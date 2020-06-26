@@ -265,6 +265,13 @@ class Thread extends Model
         return '/forum/threads/' . $this->channel->slug . '/' . $this->slug;
     }
 
+    public function redirectionPath()
+    {
+        // when using the redirect function in the controller the /forum/ gets added automatically to the url
+        return 'threads/' . $this->channel->slug . '/' . $this->slug;
+    }
+
+
     public function getPathAttribute()
     {
         if ($this->channel) {

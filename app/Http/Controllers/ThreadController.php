@@ -78,7 +78,9 @@ class ThreadController extends Controller
 
 
 
-        return redirect($thread->path())->with('flash', 'Thread created.');
+        // return redirect($thread->path())->with('flash', 'Thread created.');
+        return redirect($thread->redirectionPath())->with('flash', 'Thread created.');
+
     }
 
     /**
