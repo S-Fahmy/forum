@@ -36,7 +36,7 @@ class AppServiceProvider extends ServiceProvider
 
         //always load channels models, channels us cache key
         View::composer('*', function ($view) {
-            \Cache::forget('channels');
+            // \Cache::forget('channels'); //used when i wanted to reset the cache for channels
 
             $channels = \Cache::rememberForever('channels', function () {
                 return Channel::all();
