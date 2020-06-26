@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="card-body">
-                    <form method="POST" action="../threads">
+                    <form method="POST" action="/forum/threads">
                         @csrf
 
                         <div class="form-group"><label for="channel_id">Choose a channel:</label>
