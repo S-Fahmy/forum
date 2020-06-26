@@ -110,7 +110,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 @foreach ($channels as $channel)
-                                <a class="dropdown-item" href="{{'../'.$channel->slug}}">{{$channel->name}}</a>
+                                <a class="dropdown-item" href="{{'/forum/threads/'.$channel->slug}}">{{$channel->name}}</a>
 
                                 @endforeach
                             </div>
