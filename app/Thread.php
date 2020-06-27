@@ -119,7 +119,7 @@ class Thread extends Model
             //then we update it in the dB with the new model id
             $attachmentModel = Attachments::findOrFail($attachments['id']);
 
-            $attachmentModel->belongsToAModel($model);
+            $attachmentModel->belongsToAModel($model); //add the model id to it
         }
     }
 
