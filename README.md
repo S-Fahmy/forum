@@ -1,6 +1,6 @@
 
 
-##  laravel+vue forum
+##  web forum
 
-a forum the supports attachments uploads
+tech used: Laravel+vue
 
